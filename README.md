@@ -118,3 +118,9 @@ PS C:\Windows>
 
 
 ##### EXTRA: Here you can find a video to another DLL Hijacking technique using procmon.exe https://www.youtube.com/watch?v=XvxeUxOvKb0
+
+
+> ### ⚠️ **DISCLAIMER**  
+> ##### This project is intended for **educational and research purposes only**, to be used in **controlled environments** by **authorized penetration testers**.  
+> ##### The creator assumes **no responsibility** for any misuse or damage caused by the use of this code.
+
