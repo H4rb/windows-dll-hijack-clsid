@@ -1,7 +1,7 @@
 # windows-dll-hijack-clsid
 Powershell script to find writable CLSIDs and then DLL Hijacking it
 
-### Steps:
+* ### Steps:
 1) Let's first create a powershell script to find vulnerable CLSID keys, we'll call it as `find_writable_clsid.ps1`: 
 ```powershell
 # Let's obtain all the actual user's groups first by their name, not SID:
