@@ -50,7 +50,7 @@ PS C:\users\public> .\find_writable_clsid.ps1
 
 [PWN] Writable CLSID found!
       Key: Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\Software\Classes\CLSID\{23170F69-40C1-278A-1000-000100020000}\InprocServer32
-      Who: RUSTYKEY\Support
+      Who: RAGNAROK\Support
       Rights: FullControl
 ```
 
@@ -112,7 +112,7 @@ Copyright (C) Microsoft Corporation. All rights reserved.
 
 PS C:\Windows> whoami
 whoami
-rustykey\mm.turner
+ragnarok\mm.harper
 PS C:\Windows> 
 ```
 
