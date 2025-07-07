@@ -13,7 +13,7 @@ $myGroups = $myIdentity.Groups | ForEach-Object {
         $_.Value
     }
 }
-$myGroups += $myIdentity.Name  # Agrega el usuario directamente
+$myGroups += $myIdentity.Name  # Add the user directly
 
 # Let's iterate all CLSID keys:
 $base = "HKLM:\Software\Classes\CLSID"
