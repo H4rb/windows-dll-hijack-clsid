@@ -44,7 +44,7 @@ foreach ($clsid in $clsids) {
 }
 ```
 
-2) We execute it and we find one vulnerable CLSID key (in this case the actual user belongs to `RUSTYKEY\Support` group, so we have RW rights, we have FullControl over it to write it):
+2) We execute it and we find one vulnerable CLSID key (in this case the actual user belongs to `RAGNAROK\Support` group, so we have RW rights, we have FullControl over it to write it):
 ```powershell
 PS C:\users\public> .\find_writable_clsid.ps1
 
